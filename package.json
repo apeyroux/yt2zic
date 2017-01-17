@@ -1,7 +1,7 @@
 {
-  "name": "@peyroux/yt2zic",
+  "name": "yt2zic",
   "version": "1.0.0",
-  "description": "",
+  "description": "Massive dwl mp3 from yt",
   "main": "./lib/index.js",
   "bin": {
     "yt2zic": "./app/index.js"

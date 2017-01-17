@@ -5,6 +5,7 @@ Massive dwl mp3 from yt
 * Usage
 
 #+BEGIN_SRC sh
+npm install -g yt2zic
 mkdir mp3
 yt2zic --source sample.js --to mp3
 #+END_SRC
