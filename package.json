@@ -1,25 +1,25 @@
 {
-  "name": "yt2zic",
-  "version": "1.0.0",
-  "description": "Massive dwl mp3 from yt",
-  "main": "./lib/index.js",
-  "bin": {
-    "yt2zic": "./app/index.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node app/index.js",
-    "build": "babel src -d app",
-    "prepublish": "npm run build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0"
-  },
-  "dependencies": {
-    "yargs": "^6.6.0",
-    "youtube-dl": "^1.11.1"
-  }
+    "name": "yt2zic",
+    "version": "1.0.5",
+    "description": "Massive dwl mp3 from yt",
+    "main": "./app/index.js",
+    "bin": {
+	"yt2zic": "app/index.js"
+    },
+    "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"run": "node ./app/index.js",
+	"build": "babel src -d app",
+	"yt2zic": "node ./app/index.js"
+    },
+    "author": "Alexandre Peyroux",
+    "license": "ISC",
+    "devDependencies": {
+	"babel-cli": "^6.18.0",
+	"babel-preset-es2015": "^6.18.0"
+    },
+    "dependencies": {
+	"yargs": "^6.6.0",
+	"youtube-dl": "^1.11.1"
+    }
 }
