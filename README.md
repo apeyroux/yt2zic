@@ -12,6 +12,17 @@ mkdir mp3
 yt2zic --source sample.js --to mp3
 ```
 
+``` {.bash}
+Usage: yt2zic --source [string] --to [string] --format ["best", "aac",
+"vorbis", "mp3", "m4a", "opus", "wav"]
+
+Options:
+  -s, --source  Source file (array of url)                              [requis]
+  -t, --to      Destination path                                        [requis]
+  -f, --format  Export format (mp3, m4a ...)                    [défaut: "best"]
+  -h            Show help                                       [booléen]
+```
+
 sample.js
 =========
 

@@ -17,8 +17,17 @@ var yargs = require('yargs')
     argv = yargs.argv;
 
 fs.readFile(argv.source, "utf8", function(error, urls) {
-    JSON.parse(urls).map((url) => {
-	ytdl.exec(url, [ '-x'
+    let zics
+    
+    try {
+	zics = JSON.parse(urls)
+    } catch (e) {
+	console.error("Parsing error:", e)
+	process.exit(1)
+    }
+    
+    Array.isArray(zics) ? (zics.map((zic) => {
+	ytdl.exec(zic, [ '-x'
 			 , '--audio-format'
 			 , argv.format
 			 , argv.format !== ('mp3'||'best') ? '--get-thumbnail' : '--embed-thumbnail'], { cwd: argv.to }, function(err, output) {
@@ -28,5 +37,8 @@ fs.readFile(argv.source, "utf8", function(error, urls) {
 			     }
 			     console.log(output.join('\n'));
 			 });
-    })
+    })) : ((err) => {
+	console.log(err)
+	process.exit(1)
+    })('Not js array in your sources !')
 });

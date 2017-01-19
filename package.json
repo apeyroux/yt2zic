@@ -1,8 +1,14 @@
 {
     "name": "yt2zic",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "Massive dwl mp3 from yt",
+    "author": "Alexandre Peyroux <alex+yt2zic@px.io>",
     "main": "./app/index.js",
+    "keywords": [
+	"youtube",
+	"music",
+	"download"
+    ],
     "bin": {
 	"yt2zic": "app/index.js"
     },
