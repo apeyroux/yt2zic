@@ -30,15 +30,17 @@ fs.readFile(argv.source, "utf8", function(error, urls) {
 	ytdl.exec(zic, [ '-x'
 			 , '--audio-format'
 			 , argv.format
-			 , argv.format !== ('mp3'||'best') ? '--get-thumbnail' : '--embed-thumbnail'], { cwd: argv.to }, function(err, output) {
+			 , argv.format !== ('mp3'||'best')
+			 ? '--get-thumbnail'
+			 : '--embed-thumbnail'], { cwd: argv.to }, function(err, output) {
 			     if (err) {
 				 console.log(err)
 				 process.exit(1)
 			     }
-			     console.log(output.join('\n'));
-			 });
+			     console.log(output.join('\n'))
+			 })
     })) : ((err) => {
 	console.log(err)
 	process.exit(1)
     })('Not js array in your sources !')
-});
+})
