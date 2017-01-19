@@ -3,6 +3,7 @@
     "version": "1.0.7",
     "description": "Massive dwl mp3 from yt",
     "author": "Alexandre Peyroux <alex+yt2zic@px.io>",
+    "url" : "https://github.com/apeyroux/yt2zic",
     "main": "./app/index.js",
     "keywords": [
 	"youtube",
